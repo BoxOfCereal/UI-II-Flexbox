@@ -64,3 +64,173 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+
+header{
+	width: 876px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 10px 0px;
+	top: 0;
+	/* border: 1px solid black; */
+	position: fixed;
+	z-index: 1000;
+
+	background-color:dodgerblue;
+}
+
+header nav {
+	display: inline-block;
+	/* border: 1px solid black; */
+}
+
+header img.logo{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+
+header nav a {
+	text-decoration: none;
+	color: #999;
+	/* margin: 10px; */
+	margin-right: 55px;
+}
+
+header nav a:hover{
+	animation: link-animation .2s ease-in forwards;
+}
+
+/* main container */
+.container{
+	width: 876px;
+	margin: 0 auto;
+	margin-top: 50px;
+	/* This fixes collapsing margins but I don't know why */
+	padding-top: 1px;
+	
+}
+
+.container .jumbotron{
+	position: relative;
+	margin-bottom: 450px;
+}
+
+/* The divs that contain the catch phrase and round image */
+.container .jumbotron div{
+	display: inline-block;
+}
+
+.container .jumbotron div.right{
+	position: absolute;
+	right: 0;
+
+}
+
+/* main big text */
+.catch-phrase{
+	font-size: 78px;
+	font-family: 'Bangers', cursive;
+	text-align: center;
+}
+
+.container .jumbotron div.left{
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+
+
+a.button{
+	font-size: 16px;
+	font-family: 'Titillium Web', sans-serif;
+	text-decoration: none;
+	color: black;
+	padding: 2px 30px;
+	border: 1px solid black;
+	position: absolute;
+	left: 80px;
+	top: 240px;
+}
+
+
+
+/* The divs that contain features about etc. */
+div.column{
+	display: inline-block;
+}
+
+/* The section containing features and about */
+section.features-about{
+	/* TB LR */
+	padding: 20px 0px;
+}
+
+section.features-about div{
+	width: 50%;
+}
+
+
+/* section containing services product vision */
+section.details{
+	padding: 20px 0px;
+}
+
+section.details div{
+	width: 33%;
+}
+
+/* features ideas section */
+/* font-size 0 fixes the rendered whitespace with display:inline-block */
+section.ideas {
+	font-size: 0px;
+}
+
+section.ideas h2{
+	text-align: center;
+	font-size: 50px;
+}
+
+section.ideas div{
+	width: 50%;
+	font-size:16px;
+	margin-bottom: 30px;
+	padding: 10px;
+
+	overflow: hidden;
+}
+
+section.ideas div img{
+	height: 100px;
+	width: auto;
+	float:left;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+
+hr.footer-seperation{
+	border-color:lightgray;
+}
+
+footer{
+	margin-top: 50px;
+}
+
+footer p{
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* animations */
+
+/* animation for links */
+@keyframes link-animation{
+	from{
+		color:#999;
+	}
+	to{
+		color:black;
+	}
+}
+
