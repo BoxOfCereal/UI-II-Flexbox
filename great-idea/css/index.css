@@ -256,6 +256,14 @@ section.facts div:first-of-type{
 	/* background-color: red; */
 }
 
+section.websites{
+	display:flex;
+	flex-direction: column;
+}
+section.websites div{
+	border: 1px solid black;
+	margin: 25px 0px;
+}
 
 hr.seperate{
 	border-color:black;
@@ -287,3 +295,95 @@ footer p{
 	}
 }
 
+/* media queries */
+@media screen and (max-width: 880px){
+	/* body{
+		background-color: pink;
+	} */
+
+	/* make imgs responsive */
+	img{
+		width: 100%;
+		height: auto;
+	}
+
+	/* center anything in footer */
+	footer{
+		text-align: center;
+	}
+
+	/* collapse container so that width will sretch
+	accross smaller screens */
+	.container{
+		width: 100%;
+	}
+
+	.container:first-of-type{
+		margin-top: 0px;
+	}
+
+	/* Collapse and make bigger for smaller screens */
+	header{
+		
+		position: static;
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+	}
+	header nav{
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		/*This allows the nav to fill the page width and by 
+		inheritence letting my a's as well*/
+		width: 100%; 
+
+		text-align: center;
+	}
+
+	header nav a{
+		margin:0;
+		padding:20px;
+		border: solid 1px black;
+		width: 100%;
+		font-size: 28px;
+	}
+
+	a.button{
+		font-size:28px;
+		width: 80%;
+		text-align: center;
+	}
+	
+	.jumbotron{
+		flex-direction: column;
+	}
+	.features-about{
+		flex-direction: column;
+	}
+	.details{
+		flex-direction: column;
+	}
+	div.column{
+		margin-bottom: 15px;
+	}
+
+	/* flex services collapses to a column */
+	section.services{
+		background-color: pink;
+		height: 100%;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: stretch;
+	}
+	section.services div{
+		width:100%;
+	}
+	
+	section.facts{
+		flex-direction: column;
+	}
+
+	
+}
